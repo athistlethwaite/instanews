@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Instanews</title>
+
+    <link
+      rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="build/css/style.min.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="logo">
+<!-- <h1 class="screen-reader">Instanews-New York Times Reader</h1> -->
+        <img src="assets/images/nyt-logo.svg" alt="New York Times Logo" />
+      </div>
+    </header>
+
+    <form>
+      <p>Choose a section:</p>
+      <br>
+      <select id= "section" id="section">
+        <option value = "">Select...</option>
+        <option value = "business">Business</option>
+        <option value = "fashion">Fashion</option>
+        <option value = "food">Food</option>
+        <option value = "movies">Movies</option>
+        <option value = "sports">Sports</option>
+        <option value = "technology">Technology</option>
+      </select>
+    </form>
+
+    <section>
+      <div class="loadingimg"></div>
+      <div class="news"></div>
+    </section>
+
+    <div class="section"></div>
+
+    <footer class="site-footer">
+      <div class="copyright">
+        <p>&copy; Copyright 2019 <span>Instanews</span></p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <scrip src="build/js/script.min.js"></scrip>
+  </body>
+</html>

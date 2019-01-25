@@ -1,0 +1,28 @@
+/* ---------------LAYOUT--------------- */
+/* -------------TYPOGRAPHY------------- */
+/* ---------------HEADER--------------- */
+/* ----------------LOGO---------------- */
+.logo {
+  position: absolute;
+  display: flex;
+  text-align: center;
+}
+
+/* ---------------FOOTER--------------- */
+
+.copyright p {
+  color: #c2c2c2;
+}
+
+/* ------------MEDIAQUERIES------------ */
+/* TABLET */
+@media screen and (min-width: 600px) {
+  .logo {
+    text-align: left;
+    flex: 0 1 25%;
+  }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1240px) {
+}
