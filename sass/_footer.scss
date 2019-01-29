@@ -1,17 +1,13 @@
 .site-footer {
-    // display: flex;
-    // align-items: flex-end;
     text-align: center;
     padding-top: 20%;
     bottom: 0;
     width: 100%;
 
-
     @include desktop {
         text-align: left;
         padding-top: 20%;
         padding-left: 10px;
-
     }
 }
 
