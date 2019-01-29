@@ -317,14 +317,13 @@ li {
 
 .site-footer {
   text-align: center;
-  padding-top: 20%;
+  padding-top: 20px;
   bottom: 0;
   width: 100%; }
   @media (min-width: 1000px) {
     .site-footer {
       text-align: left;
-      padding-top: 20%;
-      padding-left: 10px; } }
+      padding: 20px; } }
 
 .copyright p {
   color: #c2c2c2;
