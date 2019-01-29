@@ -1,0 +1,52 @@
+header {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+  margin: 0 auto;
+
+  select {
+    border-radius: 5px;
+    border-color: rgb(166, 166, 166);
+    height: 30px;
+    width: 150px;
+    line-height: 30px;
+    border-width: 0.5px;
+    border-style: solid;
+    color: black;
+    outline: none;
+    padding: 20px;
+  }
+
+  @include tablet {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  @include desktop {
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+
+  }
+}
+
+.drop-down {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.nav-bar {
+  padding: 30px;
+
+  p {
+    padding: 15px;
+  }
+}

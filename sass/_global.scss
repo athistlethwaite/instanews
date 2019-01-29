@@ -1,22 +1,40 @@
-html {
-    font-size: 16px; 
-  }
-  
 body {
-    align-items: center;
-    background-color:black;
+    background-color: black;
     color: #ffffff;
-    display: flex;
-    justify-content: center;
-    font-family: "OpenSans";
+    height: 100vh;
+    font-size: 16px;
+    font-family: 'Open Sans';
+}
 
-    // //This is just a demo: 
-    // @include desktop {
-    //     background: red; 
-    // }
+.container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+
+    @mixin tablet {
+        justify-content: center;
+
+    }
+
+    @mixin desktop {
+        justify-content: left;
+    }
 }
 
 h1 {
     font-size: 4rem;
-    font-family: "OpenSans";
+    font-family: 'Open Sans';
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
 }

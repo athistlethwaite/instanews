@@ -1,8 +1,21 @@
+.site-footer {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    padding-bottom: 20px;
+    padding-left: 10px;
+
+    @include desktop {
+        text-align: left;
+    }
+}
+
 .copyright p {
     color: #c2c2c2;
-    font-family: 'OpenSans';
+    font-family: 'Open Sans';
 }
 
 .copyright span {
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
