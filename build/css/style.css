@@ -159,23 +159,9 @@ table {
 body {
   background-color: black;
   color: #ffffff;
-  height: 100vh;
+  height: 100%;
   font-size: 16px;
   font-family: 'Open Sans'; }
-
-.container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  text-align: center;
-  top: 50%;
-  left: 50%; }
 
 h1 {
   font-size: 4rem;
@@ -189,16 +175,16 @@ ul,
 li {
   list-style: none; }
 
-header {
+.site-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -206,9 +192,8 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 50px;
-  margin: 0 auto; }
-  header select {
+  padding: 30px; }
+  .site-header select {
     border-radius: 5px;
     border-color: #a6a6a6;
     height: 30px;
@@ -218,9 +203,10 @@ header {
     border-style: solid;
     color: black;
     outline: none;
-    padding: 20px; }
+    padding: 20px;
+    font-size: 16px; }
   @media (min-width: 600px) {
-    header {
+    .site-header {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -235,7 +221,7 @@ header {
           -ms-flex-direction: row;
               flex-direction: row; } }
   @media (min-width: 1000px) {
-    header {
+    .site-header {
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start;
@@ -252,7 +238,8 @@ header {
 .nav-bar {
   padding: 30px; }
   .nav-bar p {
-    padding: 15px; }
+    padding: 25px;
+    font-size: 16px; }
 
 .ajax-loader {
   display: none;
@@ -298,7 +285,7 @@ header {
       .top-stories ul li p {
         color: white;
         width: 100%;
-        height: 36%;
+        height: 38%;
         font-family: 'Open Sans'; }
   .top-stories .abstract {
     background-color: rgba(0, 0, 0, 0.6);
@@ -326,16 +313,13 @@ header {
 
 .site-footer {
   text-align: center;
-  width: 100%;
-  margin-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 20px;
-  padding-left: 10px; }
+  padding-top: 20px;
+  bottom: 0;
+  width: 100%; }
   @media (min-width: 1000px) {
     .site-footer {
-      text-align: left; } }
+      text-align: left;
+      padding: 20px; } }
 
 .copyright p {
   color: #c2c2c2;

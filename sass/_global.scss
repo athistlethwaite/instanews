@@ -1,28 +1,12 @@
 body {
     background-color: black;
     color: #ffffff;
-    height: 100vh;
+    height: 100%;
     font-size: 16px;
     font-family: 'Open Sans';
+
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-
-    @mixin tablet {
-        justify-content: center;
-
-    }
-
-    @mixin desktop {
-        justify-content: left;
-    }
-}
 
 h1 {
     font-size: 4rem;

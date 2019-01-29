@@ -45,7 +45,7 @@ $(function () {
         console.log("Sorry, no articles were found. Please select another section.");
       })
 
-      //4. Hide loader 
+      //4. Hide loader
       .always(function () {
         $('.ajax-loader').hide();
       })

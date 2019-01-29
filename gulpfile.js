@@ -12,7 +12,7 @@ const autoprefixer = require("gulp-autoprefixer");
 //--------------------CS--------------------//
 
 // Compiling and minifying Sass
-gulp.task("sass", function() {
+gulp.task("sass", function () {
   return gulp
     .src("./sass/*.scss")
     .pipe(prettyError())
@@ -22,21 +22,23 @@ gulp.task("sass", function() {
         browsers: ["last 2 versions"]
       })
     )
-    .pipe (gulp.dest("./build/css"))
+    .pipe(gulp.dest("./build/css"))
     .pipe(uglifycss())
-    .pipe(rename({ extname: ".min.css" }))
+    .pipe(rename({
+      extname: ".min.css"
+    }))
     .pipe(gulp.dest("./build/css"));
 });
 
 // Task to watch for changes to CSS & JS files
-gulp.task("watch", function(done) {
+gulp.task("watch", function (done) {
   gulp.watch("sass/*.scss", gulp.series("sass"));
   gulp.watch("js/*.js", gulp.series("lint", "scripts"));
   done();
 });
 
 // Load browsersync
-gulp.task("browser-sync", function(done) {
+gulp.task("browser-sync", function (done) {
   browserSync.init({
     server: {
       baseDir: "./"
@@ -52,16 +54,18 @@ gulp.task("browser-sync", function(done) {
 gulp.task("default", gulp.parallel("browser-sync", "watch"));
 
 // --------------------JS--------------------//
-gulp.task("scripts", function() {
+gulp.task("scripts", function () {
   return gulp
     .src("./js/*.js")
     .pipe(terser())
-    .pipe(rename({ extname: ".min.js" }))
+    .pipe(rename({
+      extname: ".min.js"
+    }))
     .pipe(gulp.dest("./build/js"));
 });
 
 //--------------------Lint--------------------//
-gulp.task("lint", function() {
+gulp.task("lint", function () {
   return gulp
     .src(["js/*.js"])
     .pipe(prettyError())
