@@ -193,7 +193,7 @@ li {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 30px;
-  margin-top: 16%;
+  margin-top: 14%;
   margin-left: 2%; }
   .site-header select {
     border-radius: 5px;
@@ -232,7 +232,7 @@ li {
           -ms-flex-align: center;
               align-items: center;
       margin-left: unset;
-      margin-top: 9%; } }
+      margin-top: 8%; } }
 
 .drop-down {
   position: relative;
