@@ -6,6 +6,8 @@
   justify-content: center;
   flex-direction: column;
   padding: 30px;
+  margin-top: 16%;
+  margin-left: 2%;
 
   select {
     border-radius: 5px;
@@ -33,6 +35,8 @@
     justify-content: flex-start;
     text-align: center;
     align-items: center;
+    margin-left: unset;
+    margin-top: 9%;
 
   }
 }
