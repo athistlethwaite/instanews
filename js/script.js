@@ -5,6 +5,8 @@ $(function () {
 
     const section = $('#drop-down').val();
 
+    $("header").addClass("header-small");
+
     if (section !== "") {
       $(".ajax-loader").show();
       getStories(section);
@@ -21,34 +23,37 @@ $(function () {
         dataType: 'json',
       })
       .done(function (data) {
-        if (data.results.length === 0) {
-          $('.top-stories ul').append('<li> Please select another section. </li>')
+          if (data.results.length === 0) {
+            $('.top-stories ul').append('<li> Please select another section. </li>')
 
-        } else {
-          const articles = data.results.slice(0, 12);
+          } else {
+            const filteredArticles = data.results.filter(function (value) {
+              return value.multimedia[4] !== undefined
+            })
+            const articles = filteredArticles.slice(0, 12);
 
-          $.each(articles.filter(function (value) {
-            const abstract = '<p class="abstract">' + value.abstract + '</p>';
-            let img = '<div class="article-image" style="background-image:url(' + value.multimedia[4].url + ');">' + abstract + '</div>';
-            const url = value.url
+            $.each(articles, function (key, value) {
+              const abstract = '<p class="abstract">' + value.abstract + '</p>';
+              let img = '<div class="article-image" style="background-image:url(' + value.multimedia[4].url + ');">' + abstract + '</div>';
+              const url = value.url
 
-            console.log(value);
+              console.log(value);
 
-            $(".top-stories ul").append('<li class="article-list">' + '<a href="' + url + '">' + img + "</a>" + "</li>")
+              $(".top-stories ul").append('<li class="article-list">' + '<a href="' + url + '">' + img + "</a>" + "</li>")
 
-          }))
+            }))
         }
       })
 
-      //3. If unsuccessful 
-      .fail(function () {
-        console.log("Sorry, no articles were found. Please select another section.");
-      })
+  //3. If unsuccessful 
+  .fail(function () {
+      console.log("Sorry, no articles were found. Please select another section.");
+    })
 
-      //4. Hide loader
-      .always(function () {
-        $('.ajax-loader').hide();
-      })
-  }
+    //4. Hide loader
+    .always(function () {
+      $('.ajax-loader').hide();
+    })
+}
 
 });
