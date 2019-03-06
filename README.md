@@ -4,8 +4,6 @@ The purpose of this project was to create an 'Instanews App'. This project utili
 
 ![alt_text](instanews.png)
 
-
-
 ## Functionality:
 1. When a category is selected from the drop down menu, 12 'Top Stories' will be displayed. 
 2. Clicking the article will send the user to the article found on the New York Times website.
