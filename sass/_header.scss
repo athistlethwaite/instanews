@@ -6,7 +6,7 @@
   justify-content: center;
   flex-direction: column;
   padding: 30px;
-  margin-top: 14%;
+  margin-top: 10%;
   margin-left: 2%;
 
   select {
@@ -58,6 +58,14 @@
 
 .small-header {
   display: flex;
-  width: 20px;
+  flex: 1 0 auto;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin-top: 2%;
 
+  .logo {
+    height: 2%;
+  }
 }

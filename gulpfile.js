@@ -7,7 +7,10 @@ const eslint = require("gulp-eslint");
 const prettyError = require("gulp-prettyerror");
 const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
+const babel = require("gulp-babel");
 
+const input = "../js/script.js";
+const output = "./js";
 
 //--------------------CS--------------------//
 
@@ -57,6 +60,7 @@ gulp.task("default", gulp.parallel("browser-sync", "watch"));
 gulp.task("scripts", function () {
   return gulp
     .src("./js/*.js")
+    .pipe(babel())
     .pipe(terser())
     .pipe(rename({
       extname: ".min.js"
@@ -72,4 +76,13 @@ gulp.task("lint", function () {
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
+});
+
+//-----------------Gulp Babel-----------------//
+
+gulp.task("babel", () => {
+  return gulp
+    .src(input)
+    .pipe(babel())
+    .pipe(gulp.dest(output));
 });
